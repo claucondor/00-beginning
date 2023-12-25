@@ -2,7 +2,12 @@ import { FOLLOW_BUTTON } from "../../assets/buttons";
 import { Button } from "../button";
 import "../button/follow-button/follow-button.css";
 
-export function TwitterFollowCard({ userName, name, isFollowing }) {
+export function TwitterFollowCard({
+  userName,
+  name,
+  isFollowing,
+  formatUserName,
+}) {
   const imageSrc = `https://unavatar.io/twitter/${userName}`;
   return (
     <article className="cs-tw-followCard">
@@ -14,7 +19,9 @@ export function TwitterFollowCard({ userName, name, isFollowing }) {
         />
         <div className="cs-tw-followCard-info">
           <strong>{name}</strong>
-          <span className="cs-tw-followCard-infoUserName">@{userName}</span>
+          <span className="cs-tw-followCard-infoUserName">
+            {formatUserName(userName)}
+          </span>
         </div>
       </header>
 
