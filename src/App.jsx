@@ -1,5 +1,6 @@
 import { FOLLOW_BUTTON } from "./assets/buttons";
 import { Button } from "./components/button";
+import "./App.css";
 
 export function App() {
   return (
