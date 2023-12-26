@@ -1,6 +1,7 @@
 .cs-tw-follow-button {
+  cursor: pointer;
   margin-left: 16px;
-  border: 0;
+  border: 0.3;
   border-radius: 999px;
   padding: 6px 16px;
   font-weight: bold;
@@ -12,4 +13,9 @@
 
 .cs-tw-follow-button:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.cs-tw-follow-button:hover {
+  background: rgba(22, 2, 199, 0.877);
+  transition: 0.3s ease background-color;
+  color: #ffffff;
 }

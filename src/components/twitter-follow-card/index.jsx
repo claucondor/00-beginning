@@ -9,6 +9,8 @@ export function TwitterFollowCard({
   formatUserName,
 }) {
   const imageSrc = `https://unavatar.io/twitter/${userName}`;
+  const buttonClassName = isFollowing ? "cs-tw-follow-button" : "";
+
   return (
     <article className="cs-tw-followCard">
       <header className="cs-tw-followCard-header">
@@ -26,11 +28,9 @@ export function TwitterFollowCard({
       </header>
 
       <aside>
-        <Button
-          text="Seguir"
-          icon={FOLLOW_BUTTON}
-          className="cs-tw-follow-button"
-        />
+        <Button icon={FOLLOW_BUTTON} className={buttonClassName}>
+          {isFollowing ? "Siguiendo" : "Seguir"}
+        </Button>
       </aside>
     </article>
   );
