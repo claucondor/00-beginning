@@ -1,10 +1,16 @@
 .cs-tw-follow-button {
   cursor: pointer;
   margin-left: 16px;
-  border: 0.3;
+  border: 0;
   border-radius: 999px;
   padding: 6px 16px;
   font-weight: bold;
+  border: 1px solid #000;
+  transition: 0.3s ease background-color;
+}
+
+.cs-tw-follow-button.is-following {
+  border: 1px solid red;
 }
 
 .cs-tw-follow-button:active {
@@ -15,7 +21,11 @@
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 .cs-tw-follow-button:hover {
-  background: rgba(22, 2, 199, 0.877);
-  transition: 0.3s ease background-color;
-  color: #ffffff;
+  background: #09f;
+  color: black;
+}
+
+.cs-tw-follow-button.is-following:hover {
+  background: #f00;
+  color: black;
 }
