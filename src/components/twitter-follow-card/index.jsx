@@ -4,7 +4,7 @@ import "../button/follow-button/follow-button.css";
 
 export function TwitterFollowCard({
   userName,
-  name,
+  children: name,
   isFollowing,
   formatUserName,
 }) {
@@ -18,7 +18,7 @@ export function TwitterFollowCard({
           alt="Imagen de usuario"
         />
         <div className="cs-tw-followCard-info">
-          <strong>{name}</strong>
+          {name}
           <span className="cs-tw-followCard-infoUserName">
             {formatUserName(userName)}
           </span>

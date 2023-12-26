@@ -5,26 +5,31 @@ export function App() {
   const formatUserName = (userName) => {
     return `@${userName}`;
   };
+
+  const angela = {
+    formatUserName,
+    userName: "ocandocrypto",
+    isFollowing: true,
+  };
+
   return (
     <section className="App">
       <TwitterFollowCard
         formatUserName={formatUserName}
         userName="elcondor99"
-        name="Claudio Condor"
         isFollowing={true}
-      />
+      >
+        <strong>Claudio Condor</strong>
+      </TwitterFollowCard>
+
       <TwitterFollowCard
         formatUserName={formatUserName}
         userName="dixonortizch"
-        name="Dixon Alberto Ortiz Chandia"
         isFollowing={false}
-      />
-      <TwitterFollowCard
-        formatUserName={formatUserName}
-        userName="ocandocrypto"
-        name="Angela"
-        isFollowing={true}
-      />
+      >
+        Dixon Ortiz
+      </TwitterFollowCard>
+      <TwitterFollowCard {...angela}>Angela Ocando</TwitterFollowCard>
     </section>
   );
 }
